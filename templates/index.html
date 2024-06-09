@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5 form-container">
+        <h1 class="text-center text-primary mb-4">Prediction Form</h1>
+        <form method="POST" action="/predict" class="bg-white p-4 rounded shadow-sm">
+            <div class="form-group">
+                <label for="order_quantity">Order Quantity:</label>
+                <input type="number" id="order_quantity" name="Order Quantity" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="unit_price">Unit Price:</label>
+                <input type="number" step="0.01" id="unit_price" name="Unit Price " class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+
+                <select class="form-control" id="category" name="Category" required>
+                    <option value="Oil">Oil</option>
+                    <option value="Battery">Battery</option>
+                    <option value="Tyre">Tyre</option>
+                    <option value="Accessories">Accessories</option>
+                </select>   
+            </div>
+            <div class="form-group">
+                <label for="delivery_location">Delivery Location:</label>
+
+                <select class="form-control" id="delivery_location" name="Delivery Location" required>
+                    <option value="Batam, Kepulauan Riau">Batam, Kepulauan Riau</option>
+                    <option value="Palembang, Sumatra Selatan">Palembang, Sumatra Selatan</option>
+                    <option value="Tanjung Balai Karimun, Kepulauan Riau">Tanjung Balai Karimun, Kepulauan Riau</option>
+                    <option value="Pekanbaru, Riau">Pekanbaru, Riau</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product_detail">Product Detail:</label>
+
+                <select class="form-control" id="product_detail" name="Product Detail (type, material, color, size)" required>
+                    <option value="Oli Mobil @Dus">Oli Mobil @Dus</option>
+                    <option value="Oli Agip @Dus">Oli Agip @Dus</option>
+                    <option value="Unilub @Dus">Unilub @Dus</option>
+                    <option value="Honda CVTF/ATF/HCF @Dus">Honda CVTF/ATF/HCF @Dus</option>
+                    <option value="i-Sint @Dus">i-Sint @Dus</option>
+                    <option value="Aki G Force">Aki G Force</option>
+                    <option value="Oli Filter Sakura">Oli Filter Sakura</option>
+                    <option value="Ban Gajah Tunggal">Ban Gajah Tunggal</option>
+                    <option value="Ban Dunlop">Ban Dunlop</option>
+                    <option value="Aki Prochnii">Aki Prochnii</option>
+                    <option value="Bola Lampu Mobil Osram">Bola Lampu Mobil Osram</option>
+                    <option value="Bearing NSK">Bearing NSK</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price_category">Price Category:</label>
+
+                <select class="form-control" id="price_category" name="Price Category" required>
+                    <option value="Cheap">Cheap</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Expensive">Expensive</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="customer_name">Customer Name:</label>
+
+                <select class="form-control" id="customer_name" name="Customer Name" required>
+                    <option value="Ahmad Yadi">Ahmad Yadi</option>
+                    <option value="Budi Tjie">Budi Tjie</option>
+                    <option value="Asep Mulyadi">Asep Mulyadi</option>
+                    <option value="Rini Susanti">Rini Susanti</option>
+                    <option value="Agus Santoso">Agus Santoso</option>
+                    <option value="Rina Tan">Rina Tan</option>
+                    <option value="Ucok Situmorang">Ucok Situmorang</option>
+                    <option value="Hendri Sijabat">Hendri Sijabat</option>
+                    <option value="Lim Hui Ling">Lim Hui Ling</option>
+                    <option value="Agus Priyono">Agus Priyono</option>
+                    <option value="Ahmad Farhan">Ahmad Farhan</option>
+                    <option value="Joko Susanto">Joko Susanto</option>
+                    <option value="Rudi">Rudi</option>
+                    <option value="Jefri">Jefri</option>
+                    <option value="Juliawan">Juliawan</option>
+                    <option value="Junedi">Junedi</option>
+                    <option value="Bagus Pramuja">Bagus Pramuja</option>
+                    <option value="Herprianto">Herprianto</option>
+                    <option value="Irvan Fadly Syahputra">Irvan Fadly Syahputra</option>
+                    <option value="M. Dasril">M. Dasril</option>
+                    <option value="Hadi Susanto">Hadi Susanto</option>
+                    <option value="Suherman">Suherman</option>
+                    <option value="Askandi">Askandi</option>
+                    <option value="Atriwandi">Atriwandi</option>
+                    <option value="Anis Febriyanto">Anis Febriyanto</option>
+                    <option value="Susi Susanti">Susi Susanti</option>
+                    <option value="Ryo Kurniawan">Ryo Kurniawan</option>
+                    <option value="Amin">Amin</option>
+                    <option value="Gideon">Gideon</option>
+                    <option value="Budiman">Budiman</option>
+                    <option value="Hendrik Kantalau">Hendrik Kantalau</option>
+                    <option value="Elisem Mali Moi">Elisem Mali Moi</option>
+                    <option value="Nani Fernandes">Nani Fernandes</option>
+                    <option value="Himda Laabudi">Himda Laabudi</option>
+                    <option value="Yonathan Brikmar">Yonathan Brikmar</option>
+                    <option value="Herman S">Herman S</option>
+                    <option value="Didin Reagen">Didin Reagen</option>
+                    <option value="Sugiyadi">Sugiyadi</option>
+                    <option value="Sumarni">Sumarni</option>
+                    <option value="Ferderika Fanggi">Ferderika Fanggi</option>
+                    <option value="Tonny Lukas">Tonny Lukas</option>
+                    <option value="Rudi Susanto">Rudi Susanto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>            
+
+                <select class="form-control" id="gender" name="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        {% if prediction is not none %}
+            <div class="mt-4 p-3 bg-light rounded shadow-sm">
+                <h2 class="text-center text-success">Prediction: {{ prediction }}</h2>
+            </div>
+        {% endif %}
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
